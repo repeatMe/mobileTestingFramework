@@ -16,6 +16,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class ProductCatalouge extends AndroidActions{
     AndroidDriver driver;
+    
     public void productCatalouge(AndroidDriver driver) {
     	this.driver=driver;
     }
@@ -26,21 +27,20 @@ public class ProductCatalouge extends AndroidActions{
     @AndroidBy(id="com.androidsample.generalstore:id/appbar_btn_cart")
     public WebElement cart;
     
-    
     public ProductCatalouge(AndroidDriver driver){
 	    super(driver);
 		this.driver=driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-	
- }
+	}
 	public void addItemCartByIndex(int index) {
 		addToCart.get(index).click();
 		
 	}
 	
-	public void goToCartPage() throws InterruptedException {
+	public CartPage goToCartPage() throws InterruptedException {
 		cart.click();
 		Thread.sleep(2000);
+		return new CartPage(driver);
 	}
 	
 	

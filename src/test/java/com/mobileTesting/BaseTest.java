@@ -11,6 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.google.common.collect.ImmutableMap;
+import com.mobileTesting.pageObjects.android.FormPage;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
@@ -22,7 +23,8 @@ public class BaseTest {
   
 	public AndroidDriver driver;
 	public AppiumDriverLocalService service;
-	
+	 FormPage formPage;
+	 
 	@BeforeClass
 	public void configureAppium() throws MalformedURLException {
 		 service=new AppiumServiceBuilder()
@@ -30,12 +32,14 @@ public class BaseTest {
 				.withIPAddress("127.0.0.1").usingPort(4723).build();
 		 service.start();
 			
-		UiAutomator2Options options=new UiAutomator2Options();
+		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("oreo");
-	    options.setApp("D://New folder//Appium//src//test//resources//ApiDemos-debug.apk");
-		options.setApp("D://New folder//Appium//src//test//resources//General-Store.apk");
-	     driver=new AndroidDriver(new URL("http://127.0.0.1:4723"),options);
-	     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));	
+	    options.setApp(System.getProperty("user.dir")+"src//test//resources//ApiDemos-debug.apk");
+		options.setApp(System.getProperty("user.dir")+"//src//test//resources//General-Store.apk");
+	    driver=new AndroidDriver(new URL("http://127.0.0.1:4723"),options);
+	    
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));	
+	   new FormPage(driver);
 	}
 	
 	public void longPressAction(WebElement ele) {
