@@ -1,24 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-15T23:20:19 IST" name="Default suite" finished-at="2024-01-15T23:20:50 IST" duration-ms="30749">
+  <suite started-at="2024-01-17T13:30:20 IST" name="Default suite" finished-at="2024-01-17T13:31:57 IST" duration-ms="96412">
     <groups>
     </groups>
-    <test started-at="2024-01-15T23:20:19 IST" name="Default test" finished-at="2024-01-15T23:20:50 IST" duration-ms="30749">
-      <class name="com.mobileTesting.eCommerce_tc_4_Hybrid">
-        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.mobileTesting.eCommerce_tc_4_Hybrid@313ac989]" started-at="2024-01-15T23:20:19 IST" name="configureAppium" finished-at="2024-01-15T23:20:49 IST" duration-ms="29549" status="PASS">
+    <test started-at="2024-01-17T13:30:20 IST" name="Default test" finished-at="2024-01-17T13:31:57 IST" duration-ms="96412">
+      <class name="com.mobileTesting.eCommerce_tc_2">
+        <test-method is-config="true" signature="configureAppium()[pri:0, instance:com.mobileTesting.eCommerce_tc_2@4c371370]" started-at="2024-01-17T13:30:20 IST" name="configureAppium" finished-at="2024-01-17T13:31:06 IST" duration-ms="45198" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configureAppium -->
-        <test-method signature="FillForm()[pri:0, instance:com.mobileTesting.eCommerce_tc_4_Hybrid@313ac989]" started-at="2024-01-15T23:20:50 IST" name="FillForm" finished-at="2024-01-15T23:20:50 IST" duration-ms="12" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="FillFormPositiveFlow()[pri:0, instance:com.mobileTesting.eCommerce_tc_2@4c371370]" started-at="2024-01-17T13:31:06 IST" name="FillFormPositiveFlow" finished-at="2024-01-17T13:31:36 IST" duration-ms="30956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillFormPositiveFlow -->
+        <test-method signature="FillForm_ErrorValidation()[pri:0, instance:com.mobileTesting.eCommerce_tc_2@4c371370]" started-at="2024-01-17T13:31:36 IST" name="FillForm_ErrorValidation" finished-at="2024-01-17T13:31:57 IST" duration-ms="20051" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot invoke "com.mobileTesting.pageObjects.android.FormPage.setNameField(String)" because "this.formPage" is null]]>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [a2de64b3-8749-4748-939b-0ededef5dc81, findElement {using=xpath, value=//android.widget.RadioButton[@text='Female']}]
+Capabilities {appium:app: C:\Users\offic\eclipse-work..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\offic\eclipse-work..., automationName: UIAutomator2, deviceName: oreo, platformName: ANDROID}, appium:deviceApiLevel: 26, appium:deviceManufacturer: Google, appium:deviceModel: Android SDK built for x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 8.0.0, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: a2de64b3-8749-4748-939b-0ededef5dc81]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.mobileTesting.pageObjects.android.FormPage.setNameField(String)" because "this.formPage" is null
-at com.mobileTesting.eCommerce_tc_4_Hybrid.FillForm(eCommerce_tc_4_Hybrid.java:16)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [a2de64b3-8749-4748-939b-0ededef5dc81, findElement {using=xpath, value=//android.widget.RadioButton[@text='Female']}]
+Capabilities {appium:app: C:\Users\offic\eclipse-work..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\offic\eclipse-work..., automationName: UIAutomator2, deviceName: oreo, platformName: ANDROID}, appium:deviceApiLevel: 26, appium:deviceManufacturer: Google, appium:deviceModel: Android SDK built for x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 8.0.0, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: a2de64b3-8749-4748-939b-0ededef5dc81
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:354)
+at com.mobileTesting.eCommerce_tc_2.FillForm_ErrorValidation(eCommerce_tc_2.java:17)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -47,15 +78,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FillForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mobileTesting.eCommerce_tc_4_Hybrid@313ac989]" started-at="2024-01-15T23:20:50 IST" name="tearDown" finished-at="2024-01-15T23:20:50 IST" duration-ms="206" status="PASS">
+        </test-method> <!-- FillForm_ErrorValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.mobileTesting.eCommerce_tc_2@4c371370]" started-at="2024-01-17T13:31:57 IST" name="tearDown" finished-at="2024-01-17T13:31:57 IST" duration-ms="175" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.mobileTesting.eCommerce_tc_4_Hybrid -->
+      </class> <!-- com.mobileTesting.eCommerce_tc_2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
