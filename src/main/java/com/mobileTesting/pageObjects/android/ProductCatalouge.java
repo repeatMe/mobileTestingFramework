@@ -17,9 +17,6 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 public class ProductCatalouge extends AndroidActions{
     AndroidDriver driver;
     
-    public void productCatalouge(AndroidDriver driver) {
-    	this.driver=driver;
-    }
     
     @AndroidBy(xpath="//android.widget.TextView[@text='ADD TO CART']")
     public List<WebElement> addToCart;

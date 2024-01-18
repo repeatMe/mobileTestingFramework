@@ -6,8 +6,9 @@
       <class name="com.mobileTesting.eCommerce_tc_2">
         <methods>
           <include name="configureAppium"/>
-          <include name="tearDown"/>
           <include name="FillForm_ErrorValidation"/>
+          <include name="tearDown"/>
+          <include name="FillFormPositiveFlow"/>
         </methods>
       </class> <!-- com.mobileTesting.eCommerce_tc_2 -->
     </classes>

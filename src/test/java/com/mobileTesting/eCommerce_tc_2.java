@@ -1,12 +1,25 @@
 package com.mobileTesting;
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.google.common.collect.ImmutableMap;
+
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.Activity;
+
 
 public class eCommerce_tc_2 extends BaseTest{
 
+	@BeforeMethod
+	public void preSetup() {
+		//this line will help to come back to the home page after every test run.
+		//Activity activity=new Activity("com.androidsample.generalstore","com.androidsample.generalstore.MainActivity");
+		//driver.currentActivity();
+		driver.executeScript("mobile: startActivity", ImmutableMap.of("intent","com.androidsample.generalstore/com.androidsample.generalstore.MainActivity"));
+	}
+	
 	
 	@Test
 	public void FillForm_ErrorValidation() throws InterruptedException
@@ -27,7 +40,6 @@ public class eCommerce_tc_2 extends BaseTest{
 	@Test
 	public void FillFormPositiveFlow() throws InterruptedException
 	{
-		
 	    driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Abhishek");
 		driver.hideKeyboard();
 		driver.findElement(By.xpath("//android.widget.RadioButton[@text='Female']")).click();

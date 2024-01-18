@@ -11,8 +11,8 @@ public class eCommerce_tc_4_Hybrid extends BaseTest{
 	@Test
 	public void FillForm() throws InterruptedException 
 	{
-    	
-		formPage.setNameField("Abhishek");
+		
+  		formPage.setNameField("Abhishek");
 		formPage.setGender("female");
 		formPage.setCountrySelection("Argentina");
 		ProductCatalouge productCatalouge=formPage.submitForm();
