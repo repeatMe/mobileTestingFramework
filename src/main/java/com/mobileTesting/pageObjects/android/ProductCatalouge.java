@@ -15,20 +15,22 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class ProductCatalouge extends AndroidActions{
+	
     AndroidDriver driver;
-    
-    
-    @AndroidBy(xpath="//android.widget.TextView[@text='ADD TO CART']")
-    public List<WebElement> addToCart;
-    
-    @AndroidBy(id="com.androidsample.generalstore:id/appbar_btn_cart")
-    public WebElement cart;
     
     public ProductCatalouge(AndroidDriver driver){
 	    super(driver);
 		this.driver=driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
+    
+    @AndroidFindBy(xpath="//android.widget.TextView[@text='ADD TO CART']")
+    public List<WebElement> addToCart;
+    
+    @AndroidFindBy(id="com.androidsample.generalstore:id/appbar_btn_cart")
+    public WebElement cart;
+    
+   
 	public void addItemCartByIndex(int index) {
 		addToCart.get(index).click();
 		

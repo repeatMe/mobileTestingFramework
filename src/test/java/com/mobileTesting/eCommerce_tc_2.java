@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.google.common.collect.ImmutableMap;
+import com.mobileTesting.TestUtils.BaseTest;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.Activity;
@@ -24,9 +25,7 @@ public class eCommerce_tc_2 extends BaseTest{
 	@Test
 	public void FillForm_ErrorValidation() throws InterruptedException
 	{
-		
-	    //driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Abhishek");
-		//driver.hideKeyboard();
+	
 		driver.findElement(By.xpath("//android.widget.RadioButton[@text='Female']")).click();	
 		driver.findElement(By.id("android:id/text1")).click();
 		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Argentina\"));"));

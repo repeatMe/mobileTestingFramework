@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobileTesting.eCommerce_tc_2">
+      <class name="com.mobileTesting.eCommerce_tc_4_Hybrid">
         <methods>
-          <include name="configureAppium"/>
-          <include name="FillForm_ErrorValidation"/>
           <include name="tearDown"/>
-          <include name="FillFormPositiveFlow"/>
+          <include name="FillForm"/>
+          <include name="preSetup"/>
+          <include name="configureAppium"/>
         </methods>
-      </class> <!-- com.mobileTesting.eCommerce_tc_2 -->
+      </class> <!-- com.mobileTesting.eCommerce_tc_4_Hybrid -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

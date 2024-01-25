@@ -1,25 +1,41 @@
 package com.mobileTesting;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.mobileTesting.TestUtils.AndroidBaseTest;
+import com.mobileTesting.TestUtils.BaseTest;
 import com.mobileTesting.pageObjects.android.CartPage;
+import com.mobileTesting.pageObjects.android.FormPage;
 import com.mobileTesting.pageObjects.android.ProductCatalouge;
 
-public class eCommerce_tc_4_Hybrid extends BaseTest{
+import org.json.JSONObject;
 
-	@Test
-	public void FillForm() throws InterruptedException 
+public class eCommerce_tc_4_Hybrid extends AndroidBaseTest{
+
+
+
+	
+	
+	@Test(dataProvider="getData")
+	public void FillForm(HashMap<String,String> input) throws InterruptedException
 	{
+  		formPage.setNameField(input.get("name"));
+		formPage.setGender(input.get("gender"));
+		formPage.setCountrySelection(input.get("country"));
 		
-  		formPage.setNameField("Abhishek");
-		formPage.setGender("female");
-		formPage.setCountrySelection("Argentina");
 		ProductCatalouge productCatalouge=formPage.submitForm();
 		
 		//ProductCatalouge productCatalouge=new ProductCatalouge(driver);
 		productCatalouge.addItemCartByIndex(0);
 		productCatalouge.addItemCartByIndex(0);
+		
 		CartPage cartpage=productCatalouge.goToCartPage();
 		double totalSum=cartpage.getProductsSum();
 		double displayFormattedSum=cartpage.getTotalAmountDisplayed();
@@ -27,23 +43,16 @@ public class eCommerce_tc_4_Hybrid extends BaseTest{
 		cartpage.acceptTermsConditions();
 		cartpage.submitOrder();
 			
-//	Thread.sleep(6000);
-//	Set<String> contexts =driver.getContextHandles();
-//	for(String contextName :contexts)
-//	{
-//		System.out.println(contextName);
-//	}
-
-//	driver.context("WEBVIEW_com.androidsample.generalstore");//chrome driver
-//	driver.findElement(By.name("q")).sendKeys("rahul shetty academy");
-//	driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
-//	driver.pressKey(new KeyEvent(AndroidKey.BACK));
-//	driver.context("NATIVE_APP");
-//	
-
-//	//Hybrid - Google page->
-			
-		
+	}	
+	@DataProvider
+	public Object[][] getData() throws IOException {
+		List<HashMap<String, String>> data = getJsonData(System.getProperty("user.dir")+"//src//test//java//com//mobileTesting//testData//form.json");
+		return new Object[][] {{data.get(0)},{data.get(1)}};		
+	}
+	
+	@BeforeMethod
+	public void preSetup() {
+		formPage.setActivity();
 	}
 	
 	

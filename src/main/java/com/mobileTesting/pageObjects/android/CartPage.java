@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -11,6 +12,7 @@ import com.mobileTesting.utils.AndroidActions;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class CartPage extends AndroidActions {
 	
@@ -19,6 +21,7 @@ AndroidDriver driver;
 	public CartPage(AndroidDriver driver) {
 		super(driver);
 		this.driver=driver;// TODO Auto-generated constructor stub
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
 	@AndroidFindBy(id="com.androidsample.generalstore:id/productPrice")
@@ -30,7 +33,7 @@ AndroidDriver driver;
 	@AndroidFindBy(id="com.androidsample.generalstore:id/totalAmountLbl")
 	public WebElement totalAmount;
 	
-	@AndroidFindBy(id="com.androidsample.generalstore:id/termButton")
+	@AndroidFindBy(id="com.androidsample.generalstore:id/termsButton")
 	public WebElement terms;
 	
 	@AndroidFindBy(id="android:id/button1")
@@ -48,14 +51,12 @@ AndroidDriver driver;
 	
 	public List<WebElement> getProductList(){
 		return productList;
-	}
-	
-	
-	
+		}
 	
 	public double getProductsSum() {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));wait.until(ExpectedConditions.attributeContains(toolbarTitle,"text" , "Cart"));
     	int count = productList.size();
+    	System.out.println("size="+count);
 		double totalSum =0;
     	for(int i =0; i< count; i++)
 		{
@@ -66,12 +67,14 @@ AndroidDriver driver;
     	return totalSum;
 	}
 	
-	public Double getTotalAmountDisplayed() {
+	public double getTotalAmountDisplayed() {
 		return getFormattedAmount(totalAmount.getText());
 	}
 
 	public void acceptTermsConditions() {
-		longPressAction(terms);	
+		longPressAction(terms);
+		acceptButton.click();
+
 	}
 	public void submitOrder() {
 		checkBox.click();

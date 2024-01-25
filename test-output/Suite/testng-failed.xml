@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="E2E Test(failed)">
+    <classes>
+      <class name="com.mobileTesting.eCommerce_tc_4_Hybrid">
+        <methods>
+          <include name="configureAppium"/>
+          <include name="tearDown"/>
+          <include name="FillForm"/>
+        </methods>
+      </class> <!-- com.mobileTesting.eCommerce_tc_4_Hybrid -->
+    </classes>
+  </test> <!-- E2E Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

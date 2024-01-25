@@ -13,8 +13,7 @@ public class AndroidActions extends AppiumUtils {
 	AndroidDriver driver;
 	
    public AndroidActions(AndroidDriver driver) {
-	    super(driver);
-	    this.driver=driver;
+	   this.driver=driver;
 	    
 	}
    
@@ -36,17 +35,12 @@ public void scrollToEndAction()
 	}while(canScrollMore);
 }
 
-
-public void swipeAction(WebElement ele,String direction)
-{
+public void swipeAction(WebElement ele,String direction){
 	((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
 			"elementId", ((RemoteWebElement)ele).getId(),
-		 
-		    "direction", direction,
-		    "percent", 0.75
-		));
-	
-	
+		     "direction", direction,
+		     "percent", 0.75
+		));	
 }
 public void scrollToText(String text ) {
 	driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\""+text+"\"));"));
