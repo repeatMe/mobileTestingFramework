@@ -44,7 +44,7 @@ public class FormPage extends AndroidActions{
 		
 	
 	public void setNameField(String name) throws InterruptedException {
-		thread.sleep(2000);
+		
 		nameField.sendKeys(name);
         driver.hideKeyboard();	
 	}
