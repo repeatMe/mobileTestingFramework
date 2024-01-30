@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 22 16:28:55 IST 2024</td>
+<td>Started on:</td><td>Sun Jan 28 15:49:52 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10273 ms)</td>
+<tr><td>Total time:</td><td>14 seconds (14993 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,13 +76,60 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.mobileTesting.eCommerce_tc_4_Hybrid.FillForm()'><b>FillForm</b><br>Test class: com.mobileTesting.eCommerce_tc_4_Hybrid</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.mobileTesting.pageObjects.android.FormPage.setNameField(String)&quot; because &quot;this.formPage&quot; is null
-	at com.mobileTesting.eCommerce_tc_4_Hybrid.FillForm(eCommerce_tc_4_Hybrid.java:15)
+<td title='com.mobileTesting.eCommerce_tc_4_Hybrid.FillForm()'><b>FillForm</b><br>Test class: com.mobileTesting.eCommerce_tc_4_Hybrid<br>Parameters: {gender=female, name=Abhishek, country=Argentina}</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [9e274ac1-1135-4190-aabd-b479316b88a0, sendKeysToElement {value=[Ljava.lang.CharSequence;@5c18d6d4, id=00000000-0000-047b-ffff-ffff00000001}]
+Capabilities {appium:app: C:\Users\offic\eclipse-work..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\offic\eclipse-work..., automationName: UIAutomator2, deviceName: oreo, platformName: ANDROID}, appium:deviceApiLevel: 26, appium:deviceManufacturer: Google, appium:deviceModel: Android SDK built for x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 8.0.0, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (9e274ac1-1135-4190-aabd-b479316b88a0)] -&gt; id: com.androidsample.generalstore:id/nameField]
+Session ID: 9e274ac1-1135-4190-aabd-b479316b88a0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:77)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$lQdJeHW5.sendKeys(Unknown Source)
+	at com.mobileTesting.pageObjects.android.FormPage.setNameField(FormPage.java:48)
+	at com.mobileTesting.eCommerce_tc_4_Hybrid.FillForm(eCommerce_tc_4_Hybrid.java:22)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace260620222", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace260620222'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.mobileTesting.pageObjects.android.FormPage.setNameField(String)&quot; because &quot;this.formPage&quot; is null
-	at com.mobileTesting.eCommerce_tc_4_Hybrid.FillForm(eCommerce_tc_4_Hybrid.java:15)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace926612844", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace926612844'><pre>org.openqa.selenium.StaleElementReferenceException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.17.0&apos;, revision: &apos;e52b1be057*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [9e274ac1-1135-4190-aabd-b479316b88a0, sendKeysToElement {value=[Ljava.lang.CharSequence;@5c18d6d4, id=00000000-0000-047b-ffff-ffff00000001}]
+Capabilities {appium:app: C:\Users\offic\eclipse-work..., appium:appPackage: com.androidsample.generalstore, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\offic\eclipse-work..., automationName: UIAutomator2, deviceName: oreo, platformName: ANDROID}, appium:deviceApiLevel: 26, appium:deviceManufacturer: Google, appium:deviceModel: Android SDK built for x86, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x1920, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.625, appium:platformVersion: 8.0.0, appium:statBarHeight: 63, appium:takesScreenshot: true, appium:viewportRect: {height: 1731, left: 0, top: 63, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (9e274ac1-1135-4190-aabd-b479316b88a0)] -&gt; id: com.androidsample.generalstore:id/nameField]
+Session ID: 9e274ac1-1135-4190-aabd-b479316b88a0
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:134)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.appium.java_client.pagefactory.ElementInterceptor.getObject(ElementInterceptor.java:42)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:65)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:77)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$lQdJeHW5.sendKeys(Unknown Source)
+	at com.mobileTesting.pageObjects.android.FormPage.setNameField(FormPage.java:48)
+	at com.mobileTesting.eCommerce_tc_4_Hybrid.FillForm(eCommerce_tc_4_Hybrid.java:22)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -110,8 +157,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>com.mobileTesting.eCommerce_tc_4_Hybrid@408d971b</td></tr>
+<td>3</td>
+<td>com.mobileTesting.eCommerce_tc_4_Hybrid@638ef7ed</td></tr>
 </table><p>
 </body>
 </html>

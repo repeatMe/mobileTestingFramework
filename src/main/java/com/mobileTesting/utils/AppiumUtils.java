@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -52,5 +53,11 @@ public class AppiumUtils {
 	});
 	return data;	
 		}	
+	public String getScreenShot(String testCaseName,AppiumDriver driver) throws IOException {
+		File source=driver.getScreenshotAs(OutputType.FILE);
+		String destinationFile=System.getProperty("user.dir")+"//reports"+testCaseName+".png";
+	    FileUtils.copyFile(source, new File(destinationFile));
+	return destinationFile;
 	
+	}
 }

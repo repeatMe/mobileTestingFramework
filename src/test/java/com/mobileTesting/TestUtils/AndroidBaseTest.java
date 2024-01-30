@@ -23,7 +23,7 @@ public class AndroidBaseTest extends AppiumUtils {
 	    public FormPage formPage;
 	    
 
-		@BeforeClass
+		@BeforeClass(alwaysRun =true)
 		public void configureAppium() throws IOException {
 			Properties prop=new Properties();
 			FileInputStream fis=new FileInputStream(System.getProperty("user.dir")+"//src//main//resources//data.properties");
@@ -43,7 +43,7 @@ public class AndroidBaseTest extends AppiumUtils {
 		    this.formPage=new  FormPage(driver);
 		}
 		
-		@AfterClass
+		@AfterClass(alwaysRun =true)
 		public void tearDown() {
 			driver.quit();
 			service.stop();

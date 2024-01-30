@@ -6,8 +6,8 @@
       <class name="com.mobileTesting.eCommerce_tc_4_Hybrid">
         <methods>
           <include name="tearDown"/>
-          <include name="FillForm"/>
           <include name="preSetup"/>
+          <include name="FillForm"/>
           <include name="configureAppium"/>
         </methods>
       </class> <!-- com.mobileTesting.eCommerce_tc_4_Hybrid -->

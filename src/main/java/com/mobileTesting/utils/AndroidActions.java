@@ -13,16 +13,14 @@ public class AndroidActions extends AppiumUtils {
 	AndroidDriver driver;
 	
    public AndroidActions(AndroidDriver driver) {
-	   this.driver=driver;
-	    
+	   this.driver=driver;	    
 	}
    
   public void longPressAction(WebElement ele) {
 	((JavascriptExecutor)driver).executeScript("mobile: longClickGesture", 
 			ImmutableMap.of("elementId",((RemoteWebElement)ele).getId(),"duration",2000));
    }
-public void scrollToEndAction()
-{
+  public void scrollToEndAction(){
 	boolean canScrollMore;
 	do
 	{
